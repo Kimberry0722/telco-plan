@@ -1,0 +1,14 @@
+$primary-color: #f8f9fa;
+$font-color: black;
+
+body {
+  background-color: $primary-color;
+  color: $font-color;
+}
+
+#root {
+  margin: 0 auto; 
+  padding: 1rem;
+  text-align: center;
+}
+

@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  frontend:
+    build: ./telco-plan-react-app
+    ports:
+      - "5173:5173" 
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+  backend:
+    build: ./TelcoPlan.API
+    ports:
+      - "5179:8080"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
